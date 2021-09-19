@@ -15,18 +15,39 @@
   </head>
   <body>
     <div class="container">
-      <h1>Weather App</h1>
+      <div class="weather-app">
+        <h1>City Name</h1>
+        <ul>
+          <li>Date & Time</li>
+          <li>Weather condition (clear)</li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <img src="" alt="Symbol for weather" />
+            12℃ | ℉
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Windspeed: # mph</li>
+              <li>Humidity: #%</li>
+              <li>High: | Low:</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-    <footer>
+    <small>
       This project was coded by Tara Diego
       <br />
-      <a href="https://github.com/tarabite/vanilla-weather-app"
+      <a href="https://github.com/tarabite/vanilla-weather-app" target="_blank"
         >Open-sourced on GitHub</a
       >
       <br />
       Hosted on
-      <a href="https://xenodochial-spence-d3e911.netlify.app/">Netlify</a>
-    </footer>
+      <a href="https://xenodochial-spence-d3e911.netlify.app/" target="_blank"
+        >Netlify</a
+      >
+    </small>
     <script src="src/app.js"></script>
   </body>
 </html>
