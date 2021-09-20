@@ -20,7 +20,7 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <form id="location-search">
+          <form id="location-search" class="mb-3">
             <input
               type="search"
               placeholder="Location Search"
@@ -38,28 +38,29 @@
             </ul>
           </div>
           <div class="row">
-            <div class="col-6">
-              <div class="clearfix weather-temp">
+            <div class="col-2">
+              <div class="weather-image">
                 <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  src="http://openweathermap.org/img/wn/50d@2x.png"
                   alt="Weather symbol"
                   id="icon"
-                  class="float-left"
                 />
+              </div>
+            </div>
 
-                <div class="float-left">
-                  <strong id="big-temp"></strong>
-                  <span class="temp-units">
-                    <a href="#" id="fahrenheit-unit">℉</a> |
-                    <a href="#" id="celcius-unit">℃</a>
-                  </span>
-                </div>
+            <div class="col-4">
+              <div class="float-left weather-temp">
+                <strong id="big-temp"></strong>
+                <span class="units">
+                  <a href="#" id="fahrenheit-unit" class="active">℉</a> |
+                  <a href="#" id="celsius-unit">℃</a>
+                </span>
               </div>
             </div>
 
             <div class="col-6">
               <ul>
-                <li>Windspeed: <span id="windspeed"></span>mph</li>
+                <li>Windspeed: <span id="windspeed"></span>km/h</li>
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>
                   High: <span id="today-high"></span> | Low:
