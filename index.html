@@ -15,34 +15,50 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <div class="weather-search">
-          <form id="location-search">
-            <input
-              type="text"
-              placeholder="Location Search"
-              id="location-input"
-            />
-            <input type="submit" value="Go" id="location-go" />
-            <button id="current-button">Current</button>
-          </form>
-        </div>
-        <h1>City Name</h1>
-        <ul>
-          <li>Date & Time</li>
-          <li>Weather condition (clear)</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img src="" alt="Symbol for weather" />
-            12℃ | ℉
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="weather-search">
+            <form id="location-search">
+              <input
+                type="text"
+                placeholder="Location Search"
+                id="location-input"
+              />
+              <input type="submit" value="Go" id="location-go" />
+              <button id="current-button">Current</button>
+            </form>
           </div>
-          <div class="col-6">
+          <div class="overview">
+            <h1>City Name</h1>
             <ul>
-              <li>Windspeed: # mph</li>
-              <li>Humidity: #%</li>
-              <li>High: | Low:</li>
+              <li>Date & Time</li>
+              <li>Weather condition (clear)</li>
             </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temp">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  alt="Symbol for weather"
+                  class="float-left"
+                />
+                <div class="float-left">
+                  <strong>12</strong>
+                  <span class="temp-units">
+                    <a href="#" id="celcius-unit">℃</a> |
+                    <a href="#" id="fahrenheit-unit">℉</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Windspeed: # mph</li>
+                <li>Humidity: #%</li>
+                <li>High: | Low:</li>
+              </ul>
+            </div>
           </div>
         </div>
         <small>
