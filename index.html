@@ -17,22 +17,21 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <div class="weather-search">
-            <form id="location-search">
-              <input
-                type="text"
-                placeholder="Location Search"
-                id="location-input"
-              />
-              <input type="submit" value="Go" id="location-go" />
-              <button id="current-button">Current</button>
-            </form>
-          </div>
+          <form id="location-search">
+            <input
+              type="search"
+              placeholder="Location Search"
+              id="location-input"
+            />
+            <input type="submit" value="Go" id="location-go" />
+            <button id="current-button">Current</button>
+          </form>
+
           <div class="overview">
-            <h1>City Name</h1>
+            <h1 id="city-name">City Name</h1>
             <ul>
-              <li>Date & Time</li>
-              <li>Weather condition (clear)</li>
+              <li>Last updated: <span id="date"></span></li>
+              <li id="weather-condition"></li>
             </ul>
           </div>
           <div class="row">
@@ -40,26 +39,31 @@
               <div class="clearfix weather-temp">
                 <img
                   src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                  alt="Symbol for weather"
+                  alt="Weather symbol"
+                  id="icon"
                   class="float-left"
                 />
                 <div class="float-left">
-                  <strong>12</strong>
+                  <strong id="big-temp"></strong>
                   <span class="temp-units">
-                    <a href="#" id="celcius-unit">℃</a> |
-                    <a href="#" id="fahrenheit-unit">℉</a>
+                    <a href="#" id="fahrenheit-unit">℉</a> |
+                    <a href="#" id="celcius-unit">℃</a>
                   </span>
                 </div>
               </div>
             </div>
             <div class="col-6">
               <ul>
-                <li>Windspeed: # mph</li>
-                <li>Humidity: #%</li>
-                <li>High: | Low:</li>
+                <li>Windspeed: <span id="windspeed"></span>mph</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>
+                  High: <span id="today-high"></span> | Low:
+                  <span id="today-low"></span>
+                </li>
               </ul>
             </div>
           </div>
+          <div class="weather-forecast" id="forecast">Days of the week...</div>
         </div>
         <small>
           This project was coded by Tara Diego
