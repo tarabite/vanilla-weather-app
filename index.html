@@ -21,13 +21,21 @@
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <form id="location-search" class="mb-3">
-            <input
-              type="search"
-              placeholder="Location Search"
-              id="location-input"
-            />
-            <input type="submit" value="Go" id="location-go" />
-            <button id="current-button">Current</button>
+            <div class="row">
+              <div class="col-8">
+                <input
+                  type="search"
+                  placeholder="Location Search"
+                  id="location-input"
+                />
+              </div>
+              <div class="col-2">
+                <input type="submit" value="Go" id="location-go" />
+              </div>
+              <div class="col-2">
+                <input type="submit" value="Current" id="current-button" />
+              </div>
+            </div>
           </form>
 
           <div class="overview">
@@ -50,7 +58,7 @@
 
             <div class="col-4">
               <div class="float-left weather-temp">
-                <strong id="big-temp"></strong>
+                <strong id="big-temp">65</strong>
                 <span class="units">
                   <a href="#" id="fahrenheit-unit" class="active">℉</a> |
                   <a href="#" id="celsius-unit">℃</a>
@@ -70,7 +78,11 @@
             </div>
           </div>
 
-          <div class="weather-forecast" id="forecast">Days of the week...</div>
+          <hr />
+
+          <div class="weather-forecast" id="forecast">
+            7 Day Forecast... Coming Soon!
+          </div>
         </div>
 
         <small>

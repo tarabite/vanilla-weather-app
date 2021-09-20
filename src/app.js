@@ -1,9 +1,10 @@
+let apiKey = "226e21dc75160f9a90d4af371417dcc7";
+
 //Connect to search form results
 function locationSearch(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#location-input");
 
-  let apiKey = "226e21dc75160f9a90d4af371417dcc7";
   let city = `${searchInput.value}`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial`;
 
@@ -43,7 +44,6 @@ function currentPosition(position) {
   let longitude = position.coords.longitude;
   let latitude = position.coords.latitude;
 
-  let apiKey = "226e21dc75160f9a90d4af371417dcc7";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial`;
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
 }

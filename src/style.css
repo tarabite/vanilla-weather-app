@@ -1,9 +1,10 @@
 body {
   font-family: Arial, sans-serif;
+  background-color: #f8f3b6;
 }
 
 h1 {
-  color: #272142;
+  color: #54567a;
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
@@ -30,6 +31,26 @@ li:first-letter {
   text-transform: capitalize;
 }
 
+a {
+  color: #272142;
+  text-decoration: none;
+}
+
+input {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 400;
+  color: #272142;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #dab784;
+}
+
+hr {
+  border: 1px solid #dab784;
+}
+
 .weather-app-wrapper {
   margin: 30px auto;
   max-width: 600px;
@@ -42,6 +63,26 @@ li:first-letter {
   padding: 40px;
 }
 
+#location-go {
+  background-color: #dab784;
+  border: #dab784;
+}
+
+#current-button {
+  background-color: #dab784;
+  border: #dab784;
+}
+
+#location-go:hover {
+  background-color: #ee8374;
+  border: #ee8374;
+}
+
+#current-button:hover {
+  background-color: #ee8374;
+  border: #ee8374;
+}
+
 .overview {
   margin-bottom: 20px;
 }
@@ -49,23 +90,20 @@ li:first-letter {
 .weather-image {
   margin: 0px 5px;
   padding: 0;
-  height: 40px;
-  width: 40px;
 }
 
 .weather-temp strong {
-  color: black;
+  color: #54567a;
   font-size: 70px;
   font-weight: 400;
   line-height: 1;
 }
 
 .weather-temp .units {
-  color: black;
+  color: #272142;
   position: relative;
   font-size: 20px;
   top: -34px;
-  text-decoration: none;
 }
 
 .weather-temp .active {
@@ -75,10 +113,11 @@ li:first-letter {
 
 .weather-temp .active:hover {
   text-decoration: none;
+  color: #ee8374;
 }
 
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
-  color: #000;
+  color: #272142;
 }
