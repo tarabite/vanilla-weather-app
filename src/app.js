@@ -37,6 +37,9 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  //Call the Forecast function from line 113.
+  displayForecast();
 }
 
 //Connect to "Current" button
@@ -104,3 +107,33 @@ fahrenheitLink.addEventListener("click", displayFarhenTemp);
 
 let celsiusLink = document.querySelector("#celsius-unit");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+//Multi-day Weather Forecast
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Mon", "Tue", "Wed"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+      <div class="weather-forecast-date">${day}</div>
+      <img
+        src="http://openweathermap.org/img/wn/50d@2x.png"
+        alt="Weather icon"
+        width="36"
+      />
+      <div class="weather-forecast-range">
+        <span class="weather-forecast-high">18°</span>
+        <span class="weather-forecast-low">12°</span>
+      </div>
+    </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
