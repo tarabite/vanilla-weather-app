@@ -40,38 +40,41 @@
           </form>
 
           <div class="overview">
-            <h1 id="city-name">City Name</h1>
-            <ul>
-              <li>Last updated: <span id="date"></span></li>
-              <li id="weather-condition"></li>
-            </ul>
-          </div>
-          <div class="row">
-            <div class="col-2">
-              <div class="weather-image">
-                <img
-                  src="http://openweathermap.org/img/wn/50d@2x.png"
-                  alt="Weather symbol"
-                  id="icon"
-                />
+            <div class="row">
+              <div class="col-8">
+                <h1 id="city-name">City Name</h1>
+                <ul>
+                  <li>Last updated: <span id="date"></span></li>
+                  <li id="weather-condition">Weather condition</li>
+                </ul>
+              </div>
+              <div class="col-4">
+                <div class="weather-image">
+                  <img
+                    src="http://openweathermap.org/img/wn/50d@2x.png"
+                    alt="Weather symbol"
+                    id="icon"
+                  />
+                </div>
               </div>
             </div>
-
-            <div class="col-4">
-              <div class="float-left weather-temp">
-                <strong id="big-temp">42</strong>
-                <span class="units">
-                  <a href="#" id="fahrenheit-unit" class="active">℉</a> |
-                  <a href="#" id="celsius-unit">℃</a>
-                </span>
+            <div class="row">
+              <div class="col-8">
+                <ul>
+                  <li>Windspeed: <span id="windspeed"></span>km/h</li>
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                </ul>
               </div>
-            </div>
 
-            <div class="col-6">
-              <ul>
-                <li>Windspeed: <span id="windspeed"></span>km/h</li>
-                <li>Humidity: <span id="humidity"></span>%</li>
-              </ul>
+              <div class="col-4">
+                <div class="weather-temp">
+                  <strong id="big-temp">42</strong>
+                  <span class="units">
+                    <a href="#" id="fahrenheit-unit" class="active">℉</a> |
+                    <a href="#" id="celsius-unit">℃</a>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
 

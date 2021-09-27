@@ -35,7 +35,6 @@ function formatDay(timestamp) {
 }
 
 //Multi-day Weather Forecast
-
 function displayForecast(response) {
   let forecast = response.data.daily;
 
@@ -81,6 +80,7 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 
+//Displaying the search results
 function showTemperature(response) {
   let temperatureElement = document.querySelector("#big-temp");
   let cityElement = document.querySelector("#city-name");
@@ -107,7 +107,7 @@ function showTemperature(response) {
   getForecast(response.data.coord);
 }
 
-//Connect to search form results
+//Search form connections
 function search(city) {
   let apiKey = "e85ead4e5483022560d100e43a8d1f52";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
@@ -123,7 +123,7 @@ function handleSubmit(event) {
 let form = document.querySelector("#location-search-form");
 form.addEventListener("submit", handleSubmit);
 
-//Connect to "Current" button
+//"Current" button
 function currentPosition(position) {
   let longitude = position.coords.longitude;
   let latitude = position.coords.latitude;
@@ -142,7 +142,6 @@ let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", getCurrentLocation);
 
 //Fahrenheit vs Celsius clickables
-
 function displayCelsiusTemp(event) {
   event.preventDefault();
 

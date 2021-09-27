@@ -60,7 +60,9 @@ hr {
   border-radius: 16px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   color: #272142;
+  margin: 10px auto;
   padding: 40px;
+  height: 400px;
 }
 
 #location-go {
