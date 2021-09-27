@@ -58,21 +58,27 @@ hr {
 .weather-app {
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  box-shadow: 5px 5px 10px 1px rgba(65, 50, 100, 0.08);
   color: #272142;
   margin: 10px auto;
   padding: 40px;
   height: 400px;
 }
 
+#location-input {
+  box-shadow: 5px 5px 10px 1px rgba(65, 50, 100, 0.08);
+}
+
 #location-go {
   background-color: #dab784;
   border: #dab784;
+  box-shadow: 5px 5px 10px 1px rgba(65, 50, 100, 0.08);
 }
 
 #current-button {
   background-color: #dab784;
   border: #dab784;
+  box-shadow: 5px 5px 10px 1px rgba(65, 50, 100, 0.08);
 }
 
 #location-go:hover {
